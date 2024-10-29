@@ -14,9 +14,6 @@ print(head(gender_data))
 print(head(world_data))
 
 
-
-GII_19_10 <- gender_data %>%
-+     mutate(data19_10 = gii_2019 - gii_2010)
 GII_19_10 <-gender_data %>% mutate(data19_10 = gii_2019 - gii_2010)
 World_gender_output <-world_data %>% left_join(GII_19_10, by = "country")
 print(head(World_gender_output))
